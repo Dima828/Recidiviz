@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    font-family: var(--font-famiy);
+    min-width: 360px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --font-famiy: "Public Sans", sans-serif;
+    --font-family-alt: "Libre Baskerville", serif;
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-dark-green: #003331;
+    --color-dark-green-alt: #00413e;
+    --color-green-opacity: rgba(53, 83, 98, 0.8);
+    --color-green-opacity-alt: rgba(53, 83, 98, 0.6);
+    --color-light-green: #25B895;
+
+    --border: 1px solid rgba(255, 255, 255, 0.3);
+    --border-radius: 80px;
+
+    --transition: all .3s linear;
+}
