@@ -38,6 +38,15 @@ body{
     margin-inline: auto;
 }
 
+.button{
+    border: var(--border);
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    padding: 17px 34px;
+    height: 54px;
+    background: transparent;
+}
+
 ul,
 ol{
     list-style-type: none;
@@ -52,10 +61,10 @@ a{
 
 .header{
     padding-top: 18px;
-}
-
-.header__inner{
-    padding-inline: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .menu{
@@ -73,9 +82,99 @@ a{
     font-size: 13px;
     line-height: 123%;
     font-weight: 400;
-    /* color: var(--color-white); */
+    color: var(--color-white);
+    transition: var(--transition);
 }
 
+.list__item-link:hover{
+    color: var(--color-light-green);
+}
+
+/* Hero */
+
+.hero{
+    background-image: url(../image/people.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 776px;
+    color: var(--color-white);
+}
+
+.hero__inner{
+    padding-top: 190px;
+}
+
+.hero__content{
+    max-width: 542px;
+}
+
+.hero__title{
+    font-family: var(--font-family-alt);
+    font-size: clamp(32px, 2.97vw, 38px);
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.03em;
+    margin-bottom: 29px;
+}
+
+.hero__desc{
+    font-size: 18px;
+    line-height: 156%;
+    margin-bottom: 29px;
+}
+
+.hero__button{
+    color: var(--color-white);
+    font-size: 13px;
+    line-height: 154%;
+    text-align: center;
+    transition: var(--transition);
+    margin-bottom: 122px;
+}
+
+.hero__button:hover{
+    background-color: var(--color-light-green);
+}
+
+.hero__bottom{
+    padding-bottom: 39px;
+}
+
+.hero__subtitle{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    margin-bottom: 15px;
+}
+
+.hero__list{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 32px;
+}
+
+.hero__item{
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    transition: var(--transition);
+}
+
+.hero__item:hover{
+    border-top: 1px solid var(--color-light-green);
+    color: var(--color-light-green);
+}
+
+.hero__list-link{
+    display: inline-flex;
+    padding-top: 17px;
+    font-size: 15px;
+    line-height: 160%;
+}
+@media screen and (max-width: 1160px) {
+    .container{
+        padding-inline: 20px;
+    }
+}
 @media screen and (max-width: 760px) {
     .menu{
         flex-wrap: wrap;
@@ -89,5 +188,17 @@ a{
 
     .logo__link{
         margin-bottom: 10px;
+    }
+
+    .hero__list{
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 545px){
+    .hero__list{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
     }
 }
