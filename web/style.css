@@ -427,6 +427,7 @@ a{
 
 .information{
     background-color: #f4f5f5;
+    padding-bottom: 140px;
 }
 
 .information__content{
@@ -461,6 +462,120 @@ a{
     font-size: 15px;
     line-height: 160%;
     color: var(--color-green-opacity-alt);
+}
+
+/* Press */
+
+.press{
+    padding-top: 87px;
+    padding-bottom: 132px;
+}
+
+.press__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 33px;
+}
+
+.press__title{
+    font-family: var(--font-family-alt);
+    font-size: 27px;
+    line-height: 141%;
+    letter-spacing: 0.04em;
+}
+
+.press__link{
+    font-size: 13px;
+    line-height: 154%;
+    text-align-last: center;
+    color: var(--color-dark-green-alt);
+    border: 1px solid rgba(53, 83, 98, 0.2);
+    transition: var(--transition);
+}
+
+.press__link:hover{
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+}
+
+.press__card-author--ted{
+    background-image: url(../image/press/ted_talks.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left top 15px;
+}
+
+.press__card-author--corr{
+    background-image: url(../image/press/correctional_news.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left top 15px;
+}
+
+.press__card-author--dep_of_jus{
+    background-image: url(../image/press/department_of_justice.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left top 15px;
+}
+
+.press__card-author--new_york{
+    background-image: url(../image/press/new_york_times.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left top 15px;
+}
+
+.press__card-author--correct{
+    background-image: url(../image/press/corrections.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left top 15px;
+}
+
+.press__card-author--right{
+    background-image: url(../image/press/right_on_crime.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left top 15px;
+}
+
+.press__card-top{
+    display: flex;
+    color: var(--color-green-opacity-alt);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    column-gap: 16px;
+    margin-bottom: 10px;
+}
+
+.press__card-author{
+    margin: -18px 0;
+    padding: 18px 0 18px 32px;
+}
+
+.press__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.press__card{
+    border-top: 1px solid rgba(53, 83, 98, 0.3);
+    padding-top: 16px;
+    min-height: 145px;
+}
+
+.press__card-title{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 145%;  
+    color: var(--color-dark-green-alt);
 }
 @media screen and (max-width: 1160px) {
     .container{
@@ -518,6 +633,10 @@ a{
         padding-inline: 20px;
     }
 
+    .information{
+        padding-bottom: 70px;
+    }
+
     .information__content{
         flex-wrap: wrap;
     }
@@ -535,6 +654,12 @@ a{
         margin-bottom: 25px;
     }    
 
+}
+
+@media screen and (max-width: 900px) {
+    .press__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -596,5 +721,13 @@ a{
 
     .news__item{        
         grid-column: 1 span;
+    }
+
+    .press__list{
+        grid-template-columns: 1fr;
+    }
+
+    .press__top{
+        row-gap: 20px;
     }
 }
